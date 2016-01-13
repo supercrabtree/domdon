@@ -1,0 +1,19 @@
+{
+  "name": "min.js",
+  "version": "0.0.1",
+  "description": "Teeny front-end $ lib",
+  "main": "min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/supercrabtree/min.js.git"
+  },
+  "author": "George Crabtree",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/supercrabtree/min.js/issues"
+  },
+  "homepage": "https://github.com/supercrabtree/min.js"
+}
