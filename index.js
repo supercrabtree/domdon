@@ -93,7 +93,7 @@ DOM.array = function (a, b) {
  * returns itself for chaining
  */
 
-Node.prototype.on = function (events) {
+window.Node.prototype.on = function (events) {
   events.split(' ').forEach((event) => {
     this.addEventListener(event, listener, false);
   });
