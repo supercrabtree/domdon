@@ -10,6 +10,11 @@
     "test-watch": "npm test -- --watch",
     "start-server": "http-server . -p 4890 --no-browser"
   },
+ "ava": {
+    "require": [
+      "./test/helpers/setup-browser-env.js"
+    ]
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/supercrabtree/domdon.git"
