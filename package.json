@@ -2,10 +2,13 @@
   "name": "domdon",
   "version": "0.0.0",
   "description": "Teeny front end lib",
-  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
   "scripts": {
     "test": "ava",
-    "test-watch": "npm test -- --watch"
+    "test-watch": "npm test -- --watch",
+    "start-server": "http-server . -p 4890 --no-browser"
   },
   "repository": {
     "type": "git",
