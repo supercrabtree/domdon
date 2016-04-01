@@ -17,7 +17,7 @@
  * A call to DOM() can also take two parameters. If used in this way the first
  * parameter is the root element to start the search from.
  *
- * let navStack = DOM('#nav-stack') => element with id nav-stack
+ * var navStack = DOM('#nav-stack') => element with id nav-stack
  * DOM(nav-stack, 'li, .bullet') => all bullets and lis inside nav-stack
  *
  *
@@ -36,8 +36,8 @@
  */
 
 function DOM(a, b) {
-  let startNode = document;
-  let query = a;
+  var startNode = document;
+  var query = a;
   if (a.nodeType === 1 && b === null) {
     return a;
   }
@@ -52,8 +52,8 @@ function DOM(a, b) {
   const nodeList = startNode.querySelectorAll(query);
   if (nodeList.length === 0) return null;
   if (nodeList.length === 1) return nodeList[0];
-  let arr = [];
-  for (let i = 0; i < nodeList.length; i++) {
+  var arr = [];
+  for (var i = 0; i < nodeList.length; i++) {
     arr.push(nodeList[i]);
   }
   return arr;
