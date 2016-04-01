@@ -36,6 +36,12 @@
  */
 
 function DOM(a, b) {
+
+  // check a contains at least one non whitespace char
+  // otherwise querySelectorAll will throw
+
+  if (!/\S/.test(a)) return null;
+
   var startNode = document;
   var query = a;
   if (a.nodeType === 1 && b === null) {
