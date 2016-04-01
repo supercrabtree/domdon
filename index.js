@@ -58,4 +58,23 @@ function DOM(a, b) {
   }
   return arr;
 }
+
+
+
+/*
+ * The same as DOM(), except when there is only one element it will always
+ * return an Array (not NodeList).
+ *
+ * DOM('#one-of-a-kind') => an array with a length of one containing the element
+ *
+ * @param a {string|Element} - query or Element
+ * @param b {string} - query starting at Element a
+ */
+
+DOM.array = function (a, b) {
+  var res = DOM(a, b);
+  if (res === null) return [];
+  if (typeof res === 'array') return res;
+  else return [res];
+}
 module.exports = DOM;
