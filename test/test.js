@@ -1,6 +1,8 @@
 import test from 'ava';
 import DOM from '../index.js';
 
+console.log(Date.now());
+
 test("DOM('') returns null", t => {
   t.same(null, DOM(''));
 });
