@@ -20,3 +20,7 @@ test("DOM('h1') returns the h1 element", t => {
 test("DOM('li') returns a Array", t => {
   t.same(Array, DOM('li').constructor);
 });
+
+test("DOM('.booger') returns null", t => {
+  t.same(null, DOM('.booger'));
+});
