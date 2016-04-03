@@ -3,7 +3,7 @@ import DOM from '../index.js';
 
 // document, window and sample html from ./helpers/setup-browser-env.js
 
-console.log(Date.now());
+console.log('DOM', Date.now());
 
 const div = document.createElement('div');
 const h1 = document.createElement('h1');
