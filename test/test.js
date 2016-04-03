@@ -11,6 +11,12 @@ div.appendChild(h1);
 
 const nodeList = h1.childNodes;
 
+
+
+/*
+ * Type test
+ */
+
 test("DOM() throws if first argument is not a String, Node, NodeList or Array of Nodes", t => {
   t.throws(() => DOM(5));
   t.throws(() => DOM(/\S/));
@@ -22,6 +28,12 @@ test("DOM() throws if first argument is not a String, Node, NodeList or Array of
   // t.notThrows(() => DOM(nodeList));
   // t.notThrows(() => DOM([div]));
 });
+
+
+
+/*
+ * String Tests
+ */
 
 test("DOM('') returns null", t => {
   t.same(null, DOM(''));
