@@ -37,6 +37,7 @@
 
 function DOM(a, b) {
 
+  if (!isTypeOk(a)) return;
 
   /*
    * check a contains at least one non whitespace char
@@ -68,7 +69,20 @@ function DOM(a, b) {
   return arr;
 }
 
+function isTypeOk(obj) {
 
+  var isNotString = typeof obj !== 'string';
+  var isNotNode = !(obj instanceof window.Node);
+  var isNotNodeList = !(obj instanceof window.NodeList);
+  var isNotArray = !Array.isArray(obj);
+
+  if (isNotString && isNotNode && isNotNodeList && isNotArray) {
+    throw new Error('First argument to DOM() (' + obj + ') must be a String, Node, NodeList, or an Array containing just these types');
+    return false;
+  }
+
+  return true;
+}
 
 /*
  * The same as DOM(), except when there is only one element it will always
