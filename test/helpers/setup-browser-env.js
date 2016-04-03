@@ -1,3 +1,8 @@
+/*
+ * AVA automatically loads this file before tests so document and window globals
+ * are available to the tests
+ */
+
 var jsdom = require('jsdom').jsdom;
 
 // create a small html tree to test against

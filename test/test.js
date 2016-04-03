@@ -1,6 +1,8 @@
 import test from 'ava';
 import DOM from '../index.js';
 
+// document, window and sample html from ./helpers/setup-browser-env.js
+
 console.log(Date.now());
 
 test("DOM('') returns null", t => {
