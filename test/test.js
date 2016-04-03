@@ -5,6 +5,12 @@ import DOM from '../index.js';
 
 console.log(Date.now());
 
+const div = document.createElement('div');
+const h1 = document.createElement('h1');
+div.appendChild(h1);
+
+const nodeList = h1.childNodes;
+
 test("DOM('') returns null", t => {
   t.same(null, DOM(''));
 });
