@@ -90,7 +90,7 @@ function DOM(a, b) {
    * Now do the DOM selection
    */
 
-  const nodeList = context.querySelectorAll(selector);
+  var nodeList = context.querySelectorAll(selector);
 
   if (nodeList.length === 0) return null;
   if (nodeList.length === 1) return nodeList[0];
