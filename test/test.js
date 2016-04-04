@@ -44,7 +44,7 @@ test("DOM() throws if second argument is not a String or undefined", t => {
 
 
 /*
- * Argument tests
+ * DOM argument tests
  */
 
 test("DOM('') returns null", t => {
@@ -89,7 +89,7 @@ test("DOM('.countries', 'li') returns an Array", t => {
 
 
 /*
- * DOM.array tests
+ * DOM.array argument tests
  */
 
 test("DOM.array('') returns Array", t => {
