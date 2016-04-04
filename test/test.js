@@ -21,6 +21,8 @@ test("DOM() throws if first argument is not a String or Node", t => {
   t.throws(() => DOM(5));
   t.throws(() => DOM(/\S/));
   t.throws(() => DOM({}));
+  t.throws(() => DOM(null));
+  t.throws(() => DOM(undefined));
 
   t.notThrows(() => DOM('h1'));
   t.notThrows(() => DOM(div));
