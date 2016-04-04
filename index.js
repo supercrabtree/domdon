@@ -47,7 +47,7 @@ function DOM(a, b) {
   type = getType(a);
 
   if (type.isIncorrect) {
-    throw new Error('First argument to DOM() (' + obj + ') must be a String or Node');
+    throw new Error('First argument to DOM() (' + a + ') must be a String or Node');
     return;
   }
 
