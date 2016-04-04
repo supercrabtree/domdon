@@ -51,6 +51,15 @@ function DOM(a, b) {
     return;
   }
 
+  /*
+   * Get the type of the second argument, make sure it is String or undefined.
+   */
+
+  if (b !== undefined && typeof b !== 'string') {
+    throw new Error('Second argument to DOM() (' + b + ') must be a String');
+    return;
+  }
+
 
   /*
    * Set the context and selector based on arguments a and b
