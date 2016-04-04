@@ -82,3 +82,11 @@ test("DOM(div, 'h1') returns h1", t => {
 
 
 
+test("DOM('.countries', 'li') returns an Array", t => {
+  t.same(Array, DOM('.countries', 'li').constructor);
+});
+
+test("DOM(contries, 'li') returns an Array", t => {
+  var countries = DOM('.countries');
+  t.same(Array, DOM(countries, 'li').constructor);
+});
