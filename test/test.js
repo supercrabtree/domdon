@@ -90,3 +90,22 @@ test("DOM(contries, 'li') returns an Array", t => {
   var countries = DOM('.countries');
   t.same(Array, DOM(countries, 'li').constructor);
 });
+
+
+
+/*
+ * DOM.array tests
+ */
+
+test("DOM.array('') returns Array", t => {
+  t.same(Array, DOM.array('').constructor);
+});
+
+test("DOM.array('.countries') returns Array", t => {
+  t.same(Array, DOM.array('.countries').constructor);
+});
+
+test("DOM.array(div) returns Array", t => {
+  t.same(Array, DOM.array(div).constructor);
+});
+
