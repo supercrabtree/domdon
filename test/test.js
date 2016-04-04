@@ -17,7 +17,7 @@ const nodeList = h1.childNodes;
  * Type test
  */
 
-test("DOM() throws if first argument is not a String, Node, NodeList or Array of Nodes", t => {
+test("DOM() throws if first argument is not a String or Node", t => {
   t.throws(() => DOM(5));
   t.throws(() => DOM(/\S/));
   t.throws(() => DOM({}));

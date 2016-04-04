@@ -47,7 +47,7 @@ function DOM(a, b) {
   type = getType(a);
 
   if (type.isIncorrect) {
-    throw new Error('First argument to DOM() (' + obj + ') must be a String, Node, NodeList, or an Array containing just these types');
+    throw new Error('First argument to DOM() (' + obj + ') must be a String or Node');
     return;
   }
 
@@ -85,19 +85,15 @@ function DOM(a, b) {
 function getType(obj) {
 
   var isString = typeof obj === 'string';
-  var isNode = obj instanceof window.Node ;
-  var isNodeList = obj instanceof window.NodeList;
-  var isArray = Array.isArray(obj);
+  var isNode = obj instanceof window.Node;
 
-  if (!isString && !isNode && !isNodeList && !isArray) {
+  if (!isString && !isNode) {
     return { isIncorrect: true };
   }
 
   return {
     isString: isString,
-    isNode: isNode,
-    isNodeList: isNodeList,
-    isArray: isArray
+    isNode: isNode
   };
 }
 
