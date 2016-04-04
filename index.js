@@ -37,11 +37,11 @@
 
 function DOM(a, b) {
 
-  var type;
+  var type, selector, context;
 
 
   /*
-   * Make sure a is a String, Node, NodeList or Array of Nodes
+   * Get the type of the first argument, make sure it is valid.
    */
 
   type = getType(a);
@@ -53,32 +53,59 @@ function DOM(a, b) {
 
 
   /*
-   * check a contains at least one non whitespace char
-   * otherwise querySelectorAll will throw
+   * Set the context and selector based on arguments a and b
    */
 
-  if (!/\S/.test(a)) return null;
+  if (type.isNode) {
+    if (b === undefined) {
+      // nothing to select, just return the node
+      return a;
+    } else {
+      context = a;
+      selector = b;
+    }
+  }
 
-  var startNode = document;
-  var query = a;
-  if (a.nodeType === 1 && b === null) {
-    return a;
+  if (type.isString) {
+    if (b === undefined) {
+      context = document;
+      selector = a;
+    } else {
+      context = DOM(a);
+      selector = b;
+    }
   }
-  if (a.nodeType === 1) {
-    startNode = a;
-    query = b;
-  }
-  if (typeof a === 'string' && b) {
-    startNode = DOM(a);
-    query = b;
-  }
-  const nodeList = startNode.querySelectorAll(query);
+
+
+  /*
+   * Check selector contains at least one non whitespace charater
+   * otherwise querySelectorAll will throw an error
+   */
+
+  if (!/\S/.test(selector)) return null;
+
+
+
+  /*
+   * Now do the DOM selection
+   */
+
+  const nodeList = context.querySelectorAll(selector);
+
   if (nodeList.length === 0) return null;
   if (nodeList.length === 1) return nodeList[0];
+
+
+  /*
+   * Convert the NodeList to an Array
+   */
+
   var arr = [];
+
   for (var i = 0; i < nodeList.length; i++) {
     arr.push(nodeList[i]);
   }
+
   return arr;
 }
 
