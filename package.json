@@ -7,7 +7,7 @@
   ],
   "scripts": {
     "test": "ava",
-    "test-watch": "npm test -- --watch",
+    "test-watch": "npm test -- --fail-fast --watch",
     "start-server": "http-server . -p 4890 --no-browser"
   },
  "ava": {
