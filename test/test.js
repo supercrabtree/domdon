@@ -75,5 +75,10 @@ test("DOM(div) returns div", t => {
   t.same(div, DOM(div));
 });
 
+test("DOM(div, 'h1') returns h1", t => {
+  t.same(h1, DOM(div, 'h1'));
+});
+
+
 
 
