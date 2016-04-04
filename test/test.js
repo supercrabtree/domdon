@@ -58,3 +58,12 @@ test("DOM('li') returns a Array", t => {
 test("DOM('.booger') returns null", t => {
   t.same(null, DOM('.booger'));
 });
+
+
+
+test("DOM(div) returns div", t => {
+  t.same(div, DOM(div));
+});
+
+
+
