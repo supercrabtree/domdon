@@ -34,7 +34,7 @@ test("DOM() throws if first argument is not a String or Node", t => {
 
 
 /*
- * String Tests
+ * Argument tests
  */
 
 test("DOM('') returns null", t => {
