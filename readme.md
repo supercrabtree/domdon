@@ -42,3 +42,12 @@ I have found this method to work really well as generally I tend to know the str
 ```js
 DOM.array('#countries').forEach(el => el.innerHTML = '')
 ```
+
+This will return an array no matter what, so even if nothing is found for that
+selector you can still run .filter .forEach .reduce on the results.
+
+```js
+var activeNoop = DOM.array('.noop').filter(el => el.classList.contains('active'));
+```
+
+This code will run without error, and activeNoop will be undefined;
