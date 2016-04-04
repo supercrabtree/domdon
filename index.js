@@ -31,8 +31,8 @@
  * you can use any valid selector
  * https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll
  *
- * @param a {string|Element} - query or Element
- * @param b {string} - query starting at Element a
+ * @param a {string|Element} - selector or Element
+ * @param b {string} - selector starting at Element a
  */
 
 function DOM(a, b) {
@@ -103,8 +103,8 @@ function getType(obj) {
  *
  * DOM('#one-of-a-kind') => an array with a length of one containing the element
  *
- * @param a {string|Element} - query or Element
- * @param b {string} - query starting at Element a
+ * @param a {string|Element} - selector or Element
+ * @param b {string} - selector starting at Element a
  */
 
 DOM.array = function (a, b) {
