@@ -104,3 +104,6 @@ test("DOM.array(div) returns Array", t => {
   t.same(Array, DOM.array(div).constructor);
 });
 
+test("DOM.array('.boogers') returns Array", t => {
+  t.same(Array, DOM.array('').constructor);
+});
