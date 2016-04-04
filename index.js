@@ -150,27 +150,4 @@ DOM.array = function (a, b) {
   else return [res];
 }
 
-
-
-/* Add a shortcut 'on' function to all DOM nodes
- *
- * element.on('input change', function (event) {
- *   // do stuff
- * });
- *
- * Allows you to pass multiple events through, as is commonly needed with
- * cross browser development. Also turns off the capture phase of events by
- * default.
- *
- * returns itself for chaining
- */
-
-window.Node.prototype.on = function (events) {
-  events.split(' ').forEach((event) => {
-    this.addEventListener(event, listener, false);
-  });
-  return this;
-}
-
-
 module.exports = DOM;
