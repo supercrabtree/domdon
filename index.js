@@ -41,7 +41,7 @@ function DOM(a, b) {
 
 
   /*
-   * Get the type of the first argument, make sure it is valid.
+   * Get the type of the first argument, make sure it is String or Node.
    */
 
   type = getType(a);
